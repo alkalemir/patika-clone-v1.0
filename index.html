@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Patika</title>
+        <style>
+            * {
+                font-family: "Roboto Mono", monospace;
+                color: #262626;
+                font-size: 16px;
+                line-height: 20px;
+                vertical-align: baseline;
+                letter-spacing: normal;
+                word-spacing: 0px;
+                font-weight: 400;
+                font-style: normal;
+                font-variant: normal;
+                text-transform: none;
+                text-decoration: none solid rgb(38, 38, 38);
+                text-align: left;
+                text-indent: 0px;
+            }
+            .container {
+                border: 1px solid rgb(248, 230, 202);
+                height: 3000px;
+                width: 80%;
+                margin: auto;
+                position: relative;
+                margin-top: 100px;
+                z-index: 100;
+            }
+
+            .nav-bar {
+                position: fixed;
+                top: 0%;
+                left: 8%;
+                z-index: 500;
+                display: flex;
+                height: 50px;
+                /* border: 1px solid black; */
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 20px;
+                background-color: white;
+                padding: 20px;
+            }
+
+            .none-bullet {
+                list-style-type: none;
+            }
+
+            .logo {
+                float: left;
+                margin-right: 10px;
+            }
+
+            li {
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            ul li:hover {
+                font-weight: 600;
+                text-decoration: underline 3px solid rgb(255, 191, 94);
+                cursor: pointer;
+            }
+
+            ul p {
+                display: inline;
+            }
+
+            button {
+                color: #454bff;
+                border: 3px solid #454bff;
+                cursor: pointer;
+                box-sizing: border-box;
+                background-color: #fff;
+                height: 40px;
+                margin-top: 5px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .dot {
+                display: inline-block;
+                margin-top: 15px;
+            }
+
+            .topluluk::after,
+            .user::after {
+                display: inline-block;
+                margin-left: 0.255em;
+                vertical-align: 0.255em;
+                content: "";
+                border-top: 0.3em solid;
+                border-right: 0.3em solid transparent;
+                border-bottom: 0;
+                border-left: 0.3em solid transparent;
+            }
+            .user {
+                display: inline;
+                margin-left: 30px;
+                margin-top: 0px;
+            }
+
+            .user:hover {
+                cursor: pointer;
+            }
+
+            .inner-container {
+                position: relative;
+            }
+
+            .coin {
+                color: #ffbf5e;
+                font-size: 14px;
+                font-family: "Press Start 2P";
+                line-height: 20px;
+                text-decoration: none solid rgb(255, 191, 94);
+                display: inline-block;
+                position: absolute;
+                right: 40px;
+                bottom: -9px;
+                font-size: 16px;
+                font-weight: bolder;
+            }
+
+            .coin-pic {
+                display: block;
+                margin-left: 30px;
+                margin-top: 5px;
+            }
+
+            /* .inner-container:hover {
+            }
+
+            .inner-container::after {
+                display: inline-block;
+                content: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsa distinctio facere suscipit veniam vitae recusandae fuga nihil earum dolores.";
+                width: 200px;
+                height: 300px;
+                border: 2px solid black;
+                padding: 10px;
+            } */
+
+            .kariyer {
+                font-family: "Roboto Mono", monospace;
+                font-size: 30px;
+                font-weight: 500;
+                margin: 30px;
+            }
+
+            .info-card {
+                height: 23px;
+                display: inline-block;
+                border: 1px solid #ffbf5e;
+                margin: 10px;
+                padding: 5px 8px;
+                font-family: Nunito, sans-serif;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400;
+            }
+
+            .inner {
+                width: 94%;
+                height: 40%;
+                border: 3px solid black;
+                margin: auto;
+                margin-top: 20px;
+            }
+
+            .inner header {
+                height: 30%;
+                width: 100%;
+                background-color: black;
+            }
+
+            .c {
+                text-decoration: underline solid rgb(254, 191, 94);
+                font-size: 25px;
+                color: #fff;
+                font-family: "Roboto Mono", monospace;
+                font-weight: 500;
+                line-height: 37.5px;
+            }
+
+            .content {
+                font-size: 15px;
+                color: #fff;
+                font-family: "Roboto Mono", monospace;
+
+                line-height: 20px;
+            }
+
+            .left {
+                display: inline-block;
+            }
+
+            .right {
+                margin-left: 30px;
+                display: inline-block;
+            }
+
+            .detaylar {
+                display: block;
+                background-color: black;
+                text-align: center;
+                width: 200px;
+            }
+
+            .katil {
+                background-color: #454bff;
+                color: white;
+                width: 200px;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .sec {
+                position: relative;
+                width: 100%;
+                height: 70%;
+            }
+            aside {
+                position: absolute;
+                border: 1px solid #ffbf5e;
+                right: 20px;
+                top: 10px;
+                width: 25%;
+                height: 90%;
+            }
+
+            .list-item {
+                display: block;
+                margin: 20px;
+            }
+
+            .list-item:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="nav-bar">
+            <img
+                class="logo"
+                src="https://patika-prod.s3.eu-central-1.amazonaws.com/staticFiles/patikaLogo.png"
+                alt=""
+            />
+            <ul class="none-bullet">
+                <li>Dashboard</li>
+                <li>Egitimler</li>
+                <li>Bootcampler</li>
+                <li class="topluluk">Topluluk</li>
+            </ul>
+            <button>Egitime Devam</button>
+            <img
+                class="dot"
+                src="https://patika-prod.s3.eu-central-1.amazonaws.com/staticFiles/green-pixel-dot.png"
+                alt=""
+                height="20px"
+            />
+            <p>362 Online</p>
+            <div class="inner-container">
+                <p class="user">Emir Alkal</p>
+                <img
+                    class="coin-pic"
+                    src="https://patika-prod.s3.eu-central-1.amazonaws.com/staticFiles/points-coin.png"
+                    alt=""
+                    width="16px"
+                    height="16px"
+                />
+                <p class="coin">00352</p>
+            </div>
+        </div>
+        <div class="container">
+            <p class="kariyer">Kariyer patikanı seç ve yolculuğuna başla</p>
+            <div class="info-card">Lorem.</div>
+            <div class="info-card">Hic?</div>
+            <div class="info-card">Facilis?</div>
+            <div class="info-card">Accusantium?</div>
+            <div class="info-card">Architecto.</div>
+            <div class="info-card">Id.</div>
+            <div class="info-card">Quis.</div>
+            <div class="info-card">Sint.</div>
+            <div class="info-card">Consequuntur!</div>
+            <div class="info-card">Magni.</div>
+            <div class="info-card">Quod!</div>
+            <div class="info-card">Animi.</div>
+            <div class="info-card">Repudiandae?</div>
+            <div class="info-card">Ea.</div>
+            <div class="info-card">Ipsum.</div>
+            <div class="info-card">Aliquid?</div>
+            <div class="info-card">Molestias!</div>
+            <div class="info-card">Qui!</div>
+            <div class="info-card">Sed.</div>
+            <div class="info-card">Repellendus.</div>
+
+            <div class="inner">
+                <header style="display: flex">
+                    <div class="left">
+                        <img
+                            src="https://app.patika.dev/cdn/storage/Images/kjDXrdNKxzXr6a4B8/original/kjDXrdNKxzXr6a4B8.jpg"
+                            alt=""
+                            height="350px"
+                            width="200"
+                        />
+                    </div>
+                    <div class="right">
+                        <p class="c">C# 101 Patikası</p>
+                        <p class="content">
+                            C# Programlama dili her geçen gün popülerliğini daha
+                            da artırmaktadır. Bu patika C# programlama dilini,
+                            etkin bir şekilde kullanmak ve temel yapıları
+                            öğrenmek için hazırlandı. Sektörde kurumsal
+                            organizasyonların kullandığı backend yazma
+                            tekniklerini profesyonel bir akış açısıyla
+                            öğreneceksin. <br />
+                            <br />
+
+                            Visual Studio Code, Git, Veri Yapıları ve
+                            Algoritmalar, C#, Object Oriented Programming, C#
+                            Projeleri, Sql, Freelance ve Remote Çalışma
+                        </p>
+                        <button class="detaylar">Detaylar</button>
+                        <button class="katil">Katil</button>
+                    </div>
+                </header>
+                <section class="sec">
+                    <article>
+                        <h1 style="font-size: 30px; margin-left: 40px">
+                            Moduller
+                        </h1>
+
+                        <ul style="list-style-type: circle">
+                            <li class="list-item">❏ Lorem.</li>
+                            <li class="list-item">❏ Sed?</li>
+                            <li class="list-item">❏ Voluptatem!</li>
+                            <li class="list-item">❏ Fuga!</li>
+                            <li class="list-item">❏ Reiciendis.</li>
+                            <li class="list-item">❏ Iure.</li>
+                            <li class="list-item">❏ Rem?</li>
+                            <li class="list-item">❏ Distinctio?</li>
+                            <li class="list-item">❏ Harum.</li>
+                            <li class="list-item">❏ Neque!</li>
+                        </ul>
+                    </article>
+                    <aside>
+                        <p
+                            style="
+                                color: #ffbf5e;
+                                font-size: 18px;
+                                font-weight: 700;
+                                line-height: 21.6px;
+                                margin-left: 20px;
+                            "
+                        >
+                            BU PATİKADA NE VAR?
+                        </p>
+
+                        <p>
+                            2811 Katılımcı <br />
+                            70 saatlik ders içeriği <br />
+                            103 alıştırma, 10 proje ve 109 test <br />
+                            Topluluk desteği <br />
+                            Online & ücretsiz <br />
+                            Bootcamp’e yerleştirme önceliği <br />
+                            778 puan kazan
+                        </p>
+                    </aside>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
